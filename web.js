@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
 app.use(express.logger());
-buf = new Buffer(2000);
+
 app.get('/', function(request, response) {
- buf=fs.readFileSync("index.html");
+ fs.readFileSync("index.html");
  response.send(buf.toString('utf-8'));
 });
 
